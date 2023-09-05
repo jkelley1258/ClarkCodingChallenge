@@ -29,6 +29,7 @@ namespace ClarkCodingChallenge
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            //services.AddDistributedMemoryCache();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +52,8 @@ namespace ClarkCodingChallenge
             app.UseRouting();
 
             app.UseCookiePolicy();
+
+            //app.UseSession();
 
             app.UseEndpoints(routes =>
             {

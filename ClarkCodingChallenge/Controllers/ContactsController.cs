@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ClarkCodingChallenge.Models;
+using System.Net.Http;
+using System.Net;
 
 namespace ClarkCodingChallenge.Controllers
 {
@@ -15,6 +17,12 @@ namespace ClarkCodingChallenge.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public IActionResult SubmitContactInformation(ContactInformationModel contactInformation)
+        {
+            return new OkObjectResult(contactInformation);
         }
     }
 }
