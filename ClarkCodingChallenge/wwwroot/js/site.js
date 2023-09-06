@@ -3,11 +3,7 @@
 
 // Write your JavaScript code.
 function sendContactInformation(e, contactSubmitURL) {
-    var contactObj = {
-        firstName: $("#firstName").val(),
-        lastName: $("#lastName").val(),
-        email: $("#email").val()
-    };
+    var contactObj = $("#contactForm").serializeArray();
 
     $.ajax({
         type: "POST",

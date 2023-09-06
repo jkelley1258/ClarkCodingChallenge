@@ -7,10 +7,10 @@
     <h1 class="display-4">Welcome</h1>
 
     <div>
-        <form id="contactForm" action= onsubmit="sendContactInformation(event, '@Url.Action("SubmitContactInformation", "Contacts")')">
-            <input id="firstName" type="text" placeholder="First Name" required/>
-            <input id="lastName" type="text" placeholder="Last Name" required/>
-            <input id="email" type="email" placeholder="Email" required/>
+        <form id="contactForm" name="contactForm" action= onsubmit="sendContactInformation(event, '@Url.Action("SubmitContactInformation", "Contacts")')">
+            <input name="firstName" type="text" placeholder="First Name" required/>
+            <input name="lastName" type="text" placeholder="Last Name" required/>
+            <input name="email" type="email" placeholder="Email" required/>
             <input id="submitBtn" type="submit" />
         </form>
     </div>

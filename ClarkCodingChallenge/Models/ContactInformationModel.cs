@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ClarkCodingChallenge.DataAccess;
 
 namespace ClarkCodingChallenge.Models
 {
@@ -12,5 +9,14 @@ namespace ClarkCodingChallenge.Models
         public string LastName { get; set; }
 
         public string Email { get; set; }
+
+        public ContactInformationModel(ContactInformationEntity entity)
+        {
+            FirstName = entity.first_name;
+            LastName = entity.last_name;
+            Email = entity.email;
+        }
+
+        public ContactInformationModel() { }
     }
 }

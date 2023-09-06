@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ClarkCodingChallenge.DependencyInjection;
 
 namespace ClarkCodingChallenge
 {
@@ -27,8 +28,9 @@ namespace ClarkCodingChallenge
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
+            services.SetupMailingListDI();
             //services.AddDistributedMemoryCache();
         }
 
